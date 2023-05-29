@@ -1,9 +1,9 @@
 import {motion} from "framer-motion";
-import animateProps from "../../animateProps/animateProps";
+import { Link } from "react-router-dom";
+import animateProps from "../../../animateProps/animateProps";
 import './singleCharacterPage.scss';
 
 const SingleCharacterPage = ({data}) => {
-
     const {name, description, thumbnail} = data;
 
     return (
@@ -16,6 +16,7 @@ const SingleCharacterPage = ({data}) => {
                 <h2 className="single-comic__name">{name}</h2>
                 <p className="single-comic__descr">{description}</p>
             </div>
+            <Link to="/" className="single-comic__back">Back to all</Link>
         </motion.div>
     )
 }

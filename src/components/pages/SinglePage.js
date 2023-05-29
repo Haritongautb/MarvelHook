@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment} from "react";
+import { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import useMarvelService from "../../services/MarvelService";
 import ErrorMessage from "../errorMessage/ErrorMessage";
@@ -40,7 +40,7 @@ const SinglePage = ({Component, dataType}) => {
 
     return (
         <>
-            {AppBanner}
+            <AppBanner />
             {errorMessage}
             {spinner}
             {content}
@@ -48,5 +48,6 @@ const SinglePage = ({Component, dataType}) => {
     )
 
 }
+
 
 export default SinglePage;

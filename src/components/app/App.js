@@ -14,8 +14,9 @@ const Page404  = lazy(() => import("../pages/404"));
 const MainPage = lazy(() => import("../pages/MainPage"));
 const ComicsPage = lazy(() => import("../pages/ComicsPage"));
 const SinglePage = lazy(() => import("../pages/SinglePage"));
-const SingleComicPage = lazy(() => import("../pages/SingleComicPage"));
-const SingleCharacterPage = lazy(() => import("../pages/SingleCharacterPage"));
+const SingleComicPage = lazy(() => import("../pages/singleComicPage/SingleComicPage"));
+const SingleCharacterPage = lazy(() => import ("../pages/singleCharacterPage/SingleCharacterPage"));
+
 
 const App = () => {
 
@@ -46,8 +47,8 @@ const App = () => {
                             <Routes>
                                 <Route exact path="/" element={<MainPage />} />
                                 <Route path="/comics" element={<ComicsPage />} />
-                                <Route path="/comic/:id" element={<SinglePage Component={SingleComicPage} dataType="comic"/>} />
-                                <Route path="/character/:id" element={<SinglePage Component={SingleCharacterPage} dataType="character"/>}  />
+                                <Route path="/comics/:id" element={<SinglePage Component={SingleComicPage} dataType="comic"/>}/>
+                                <Route path="/character/:id" element={<SinglePage Component={SingleCharacterPage} dataType="character"/>}/>
                                 <Route path="*" element={<Page404 />}/>
                             </Routes>
                         </AnimatePresence>
